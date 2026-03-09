@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Relax Mode",
+  "version": "2.0",
+  "description": "Focus timer with break management to prevent burnout.",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Relax Mode"
+  },
+
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  }
+}

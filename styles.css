@@ -1,0 +1,233 @@
+/* ─── TIMER CARD ──────────────────────────────────────────────────────────── */
+#relax-timer-card {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 2147483646 !important;
+  background: rgba(13, 15, 26, 0.88) !important;
+  border: 1px solid #00e5ff44 !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  text-align: center !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 0 24px #00e5ff11, 0 4px 32px #00000066 !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  pointer-events: none !important;
+  min-width: 100px !important;
+}
+
+#relax-timer-label {
+  font-size: 8px !important;
+  letter-spacing: 3px !important;
+  color: #00e5ff55 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 4px !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+#relax-timer-display {
+  font-size: 26px !important;
+  letter-spacing: 4px !important;
+  color: #00e5ff !important;
+  text-shadow: 0 0 12px #00e5ff99 !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  line-height: 1.2 !important;
+}
+
+
+/* ─── CANVAS ──────────────────────────────────────────────────────────────── */
+#relax-canvas {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483644 !important;
+  pointer-events: none !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+
+/* ─── OVERLAY ─────────────────────────────────────────────────────────────── */
+#relax-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483645 !important;
+  background: rgba(5, 7, 18, 0.93) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: all !important;
+  opacity: 0 !important;
+  transition: opacity 0.6s ease !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+#relax-overlay.relax-visible {
+  opacity: 1 !important;
+}
+
+
+/* ─── MODAL ───────────────────────────────────────────────────────────────── */
+#relax-modal {
+  background: #0d0f1a !important;
+  border: 1px solid #00e5ff33 !important;
+  border-radius: 14px !important;
+  padding: 44px 52px !important;
+  max-width: 440px !important;
+  width: 90% !important;
+  text-align: center !important;
+  box-shadow: 0 0 80px #00e5ff0d, 0 0 140px #00000099 !important;
+  animation: relax-float 4s ease-in-out infinite !important;
+}
+
+#relax-modal-tag {
+  font-size: 9px !important;
+  letter-spacing: 3px !important;
+  color: #00e5ff44 !important;
+  margin-bottom: 18px !important;
+  text-transform: uppercase !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+#relax-modal-title {
+  font-size: 18px !important;
+  color: #e0f7ff !important;
+  font-weight: normal !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 10px !important;
+  line-height: 1.5 !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+#relax-modal-sub {
+  font-size: 11px !important;
+  color: #ffffff44 !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 30px !important;
+  line-height: 1.7 !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+#relax-games-note {
+  font-size: 10px !important;
+  color: #ffffff22 !important;
+  margin-top: 18px !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.5px !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+#relax-modal-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+
+/* ─── BUTTONS ─────────────────────────────────────────────────────────────── */
+.relax-btn {
+  padding: 12px 20px !important;
+  background: transparent !important;
+  border: 1px solid #00e5ff33 !important;
+  color: #00e5ffcc !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  font-size: 12px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+}
+
+.relax-btn:hover {
+  background: #00e5ff15 !important;
+  border-color: #00e5ff !important;
+  color: #00e5ff !important;
+  box-shadow: 0 0 16px #00e5ff22 !important;
+}
+
+.relax-btn-yes {
+  border-color: #00e5ff66 !important;
+  color: #00e5ff !important;
+}
+
+.relax-btn-no {
+  border-color: #ffffff22 !important;
+  color: #ffffff66 !important;
+}
+
+.relax-btn-back {
+  border-color: #ffffff11 !important;
+  color: #ffffff33 !important;
+  font-size: 10px !important;
+}
+
+.relax-btn-back:hover {
+  border-color: #ffffff33 !important;
+  color: #ffffff66 !important;
+  background: #ffffff08 !important;
+  box-shadow: none !important;
+}
+
+
+/* ─── SLEEP MODE ──────────────────────────────────────────────────────────── */
+#relax-sleep {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
+  background: #000000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 48px !important;
+  opacity: 0 !important;
+  transition: opacity 0.8s ease !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  pointer-events: all !important;
+}
+
+#relax-sleep.relax-visible {
+  opacity: 1 !important;
+}
+
+#relax-sleep-text {
+  font-size: 36px !important;
+  color: #ffffff !important;
+  letter-spacing: 5px !important;
+  font-weight: normal !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  animation: relax-glow 3s ease-in-out infinite !important;
+}
+
+#relax-sleep-exit {
+  padding: 10px 28px !important;
+  background: transparent !important;
+  border: 1px solid #ffffff22 !important;
+  color: #ffffff44 !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  border-radius: 4px !important;
+  transition: all 0.3s !important;
+}
+
+#relax-sleep-exit:hover {
+  border-color: #ffffff55 !important;
+  color: #ffffff99 !important;
+}
+
+
+/* ─── ANIMATIONS ──────────────────────────────────────────────────────────── */
+@keyframes relax-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes relax-glow {
+  0%, 100% { text-shadow: 0 0 10px #ffffff44, 0 0 30px #ffffff11; }
+  50%       { text-shadow: 0 0 24px #ffffffcc, 0 0 60px #ffffff55; }
+}

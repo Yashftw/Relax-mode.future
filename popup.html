@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relax Mode</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 280px;
+      background: #0d0f1a;
+      color: #e0f7ff;
+      font-family: 'Share Tech Mono', monospace;
+      padding: 20px;
+      border: 1px solid #00e5ff22;
+    }
+
+    .label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #ffffff33;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 15px;
+      color: #00e5ff;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #00e5ff22;
+      padding-bottom: 12px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field input {
+      width: 100%;
+      background: #111827;
+      border: 1px solid #00e5ff33;
+      color: #00e5ff;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 22px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 4px;
+      outline: none;
+      letter-spacing: 2px;
+    }
+
+    .field input:focus {
+      border-color: #00e5ff;
+      box-shadow: 0 0 10px #00e5ff22;
+    }
+
+    .suffix {
+      font-size: 9px;
+      color: #ffffff33;
+      text-align: center;
+      margin-top: 4px;
+      letter-spacing: 2px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: 1px solid #00e5ff55;
+      color: #00e5ff;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+      margin-bottom: 8px;
+    }
+
+    .btn:hover {
+      background: #00e5ff15;
+      border-color: #00e5ff;
+      box-shadow: 0 0 12px #00e5ff33;
+    }
+
+    .btn.stop {
+      border-color: #ff4d4d55;
+      color: #ff4d4d;
+    }
+
+    .btn.stop:hover {
+      background: #ff4d4d15;
+      border-color: #ff4d4d;
+    }
+
+    .status {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-align: center;
+      color: #ffffff33;
+      margin-top: 4px;
+    }
+
+    .status span { color: #00e5ffaa; }
+  </style>
+</head>
+<body>
+  <div class="label">Extension</div>
+  <h1>// RELAX MODE</h1>
+
+  <div class="field">
+    <div class="label">Focus Duration</div>
+    <input type="number" id="minutes" value="25" min="1" max="180" placeholder="25" title="Focus Duration in minutes"/>
+    <div class="suffix">MINUTES</div>
+  </div>
+
+  <button class="btn" id="startBtn">▶ Start Timer</button>
+  <button class="btn stop" id="stopBtn">■ Stop Timer</button>
+
+  <div class="status">Status: <span id="statusText">IDLE</span></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
